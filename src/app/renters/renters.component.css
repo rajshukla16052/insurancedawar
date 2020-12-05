@@ -1,0 +1,16 @@
+
+.trusted-caption p {
+  margin-bottom: 10px;
+  margin-left: 150px;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 500px;
+  font-size: 20px;
+
+  text-align: justify;
+}
+.card h3{
+  font-weight: 800px;
+text-shadow: burlywood;
+ text-align: justify;
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

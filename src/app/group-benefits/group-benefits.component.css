@@ -1,0 +1,21 @@
+/* .carousel-item {
+  height: 50vh;
+  min-height: 200px;
+    background: no-repeat center center scroll;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  } */
+ .team-profile h2 {
+  font-weight: 800px;
+  text-shadow: burlywood;
+  text-align: justify;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+ }
+ .single-profile li {
+  font-family:'Times New Roman', Times, serif;
+  /* font-weight: 900; */
+  font-size:18px;
+  
+ }

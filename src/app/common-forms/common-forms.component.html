@@ -1,0 +1,174 @@
+
+
+<div class="request-back-area section-padding30">
+    <div class="container">
+        <div class="row d-flex justify-content-between">
+            <div class="col-xl-4 col-lg-5 col-md-5">
+                <div class="request-content">
+                    <h3>Start Saving Today</h3>
+                    <p>We will get back to you within 24 hrs.</p>
+                </div>
+            </div>
+            <div class="col-xl-7 col-lg-7 col-md-7">
+        
+                <div class="form-wrapper">
+
+                  <form #commonForm ="ngForm" (ngSubmit)="onSubmit(commonForm)">
+                      <div class ="row">
+                        <div class="col-lg-6 col-md-6">
+                          <div class="form-box  mb-30">
+                            <input type="name" class="form-control" id="name"  name="name" #name="ngModel"
+                               placeholder="Name*"  [(ngModel)]="commonService.selectedForm.name"  required>
+                               <!-- <small id="name" class="form-text text-muted" *ngIf="name.touched && !name.valid">Please enter your name</small> -->
+                               <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
+                                <div *ngIf="name.errors.required" class="text-danger text-left">
+                                  <span class="fa fa-exclamation-circle"></span> Please enter your Full Name here.
+                                </div>
+                              </div> 
+                            </div>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                              <div class="form-box  mb-30">
+                                <input type="phoneno" class="form-control" id="phoneno"  name="phoneno" #phoneno="ngModel"
+                                   placeholder="Phone No.*"  [(ngModel)]="commonService.selectedForm.phoneno"  required>
+                                   <!-- <small id="phoneno" class="form-text text-muted" *ngIf="phoneno.touched && !phoneno.valid">Please enter your phone no.</small> -->
+                                   <div *ngIf="phoneno.invalid && (phoneno.dirty || phoneno.touched)" class="error">
+                                    <div *ngIf="phoneno.errors.required" class="text-danger text-left">
+                                      <span class="fa fa-exclamation-circle"></span> Please enter your Phone number.
+                                    </div>
+                                  </div>
+                                </div>
+                                </div>
+                                <div class="col-lg-6 col-md-6">
+                                  <div class="form-box  mb-30">
+                                    <input type="email" class="form-control" id="email"  name="email" #email="ngModel"
+                                       placeholder="Email*"  [(ngModel)]="commonService.selectedForm.email" email  required pattern="^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$">
+                                       <!-- <small id="email" class="form-text text-muted" *ngIf="email.touched && !email.valid">Please enter your email</small> -->
+                                       <div *ngIf="email.valid && (email.dirty || email.touched)" class="error">
+                                        <div *ngIf="email.errors.required" class="text-danger text-left"><span class="fa fa-exclamation-circle"></span>
+                                             Please enter your Email address.
+                                        </div>
+                                        <div *ngIf="email.errors.email" class="text-danger text-left"><span class="fa fa-exclamation-circle"></span>
+                                             Email must be a valid email address.
+                                        </div>
+                                      </div>
+                                    </div>
+                                    </div>
+                                    <div class="col-lg-6 col-md-6">
+                                      <div class="form-box mb-30">
+                                          <select name="types" id="types" [(ngModel)]="commonService.selectedForm.types"
+                                          placeholder="Types of Insurance*" class="form-control" 
+                                         required #types="ngModel"  >
+                                         <option value="">Types of Insurance</option>
+                                              <option value="autoinsurance">Auto Insurance</option>
+                                              <option value="homeinsurance">Home Insurance</option>
+                                              <option value="otherpersonalinsurance">Othe Personal Insurance</option>
+                                              <option value="businessinsurance">Business Insurance</option>
+                                              <option value="lifeinsurance">Life Insurance</option>
+                                              <option value="healthinsurance">Health Insurance</option>
+                                              <option value="groupbenefits">Group Benefits</option>                                          
+                                          </select>
+                                      </div>
+                                  </div> 
+                      </div>
+                      <button type="submit" class="btn btn-primary" [disabled]="!commonForm.valid">
+                        <i class="fa fa-spinner text-light fa-pulse fa-x fa-fw" *ngIf="submitted"></i>
+                        <span class="sr-only">Loading...</span> Submit <i class="fa fa-arrow-right text-light"></i>
+                      </button>
+
+
+                  </form>
+                  <!-- <form  (ngSubmit)=" commonForm.invalid && onSubmit(commonForm)" #commonForm ="ngForm" >
+                    <div class="row">
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-box  mb-30">
+                                <input type="text" id="name" name="name" [(ngModel)]="commonService.selectedForm.name" class="form-control" placeholder="Name*"
+                                required  #name="ngModel" pattern="[a-z]{3,10}">
+
+                               <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
+                                    <div *ngIf="name.errors.required" class="text-danger text-left">
+                                      <span class="fa fa-exclamation-circle"></span> Please enter your Full Name here.
+                                    </div>
+                                  </div>  -->
+          
+                                  <!-- <div *ngIf="name.invalid && (name.dirty || name.touched)" class="error">
+                                    <div *ngIf="name.errors.required" class="text-danger text-left alert alert-danger">
+                                      <span class="fa fa-exclamation-circle"></span> Please enter your Full Name here.
+                                    </div>
+                                  </div> -->
+            
+                            <!-- </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-box  mb-30">
+                                <input type="phoneno" id="phoneno" name="phoneno" [(ngModel)]="commonService.selectedForm.phoneno" class="form-control" placeholder="Phone No.*"
+                                 required #phoneno="ngModel">
+                                 <div *ngIf="phoneno.invalid && (phoneno.dirty || phoneno.touched)" class="error">
+                                    <div *ngIf="phoneno.errors.required" class="text-danger text-left">
+                                      <span class="fa fa-exclamation-circle"></span> Please enter your Phone number.
+                                    </div>
+                                  </div> -->
+          
+                                 <!-- <div *ngIf="phoneno.invalid && (phoneno.dirty || phoneno.touched)" class="error">
+                                    <div *ngIf="phoneno.errors.required" class="text-danger text-left alert alert-danger">
+                                      <span class="fa fa-exclamation-circle"></span> Please enter your Phone no. here.
+                                    </div>
+                                  </div> -->
+            
+                            <!-- </div>
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                            <div class="form-box  mb-30">
+                                <input type="text" name="email" id="email" [(ngModel)]="commonService.selectedForm.email" placeholder="Email*" class="form-control" 
+                                required email #email="ngModel">
+                                <div *ngIf="email.invalid && (email.dirty || email.touched)" class="error">
+                                    <div *ngIf="email.errors.required" class="text-danger text-left"><span class="fa fa-exclamation-circle"></span>
+                                         Please enter your Email address.
+                                    </div>
+                                    <div *ngIf="email.errors.email" class="text-danger text-left"><span class="fa fa-exclamation-circle"></span>
+                                         Email must be a valid email address.</div>
+                                  </div>
+       -->
+            
+                            <!-- </div>
+                        </div>
+                     <div class="col-lg-6 col-md-6">
+                            <div class="form-box mb-30">
+                                <select name="types" id="types" [(ngModel)]="commonService.selectedForm.types"
+                                placeholder="Types of Insurance*" class="form-control" 
+                               required email #types="ngModel"  >
+                               <option value="">Types of Insurance</option>
+                                    <option value="autoinsurance">Auto Insurance</option>
+                                    <option value="homeinsurance">Home Insurance</option>
+                                    <option value="otherpersonalinsurance">Othe Personal Insurance</option>
+                                    <option value="businessinsurance">Business Insurance</option>
+                                    <option value="lifeinsurance">Life Insurance</option>
+                                    <option value="healthinsurance">Health Insurance</option>
+                                    <option value="groupbenefits">Group Benefits</option>                                          
+                                </select>
+                            </div>
+                        </div> 
+                        <div class="col-lg-4 col-md-4"> -->
+                            <!-- <button type="submit" class="send-btn"  value="insert" >Send
+
+                            </button> -->
+                            <!-- <button name="submit" type="submit" class="btn btn-primary">
+                                <i class="fa fa-spinner text-light fa-pulse fa-x fa-fw" *ngIf="submitted"></i>
+                                <span class="sr-only">Loading...</span> Submit <i class="fa fa-arrow-right text-light"></i>
+                              </button>
+                        </div>
+                    </div>
+                </form> -->
+                   <!-- <div class="success" *ngIf="showSucessMessage">
+                        Saved successfully
+                      </div> -->
+                       <!-- <div class="alert" *ngIf="serverErrorMessages">
+                        {{serverErrorMessages}}
+                      </div>  -->
+
+                </div>
+            </div>   
+        </div>
+    
+        </div>
+    </div>
