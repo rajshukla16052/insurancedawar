@@ -1,97 +1,112 @@
 
 <header> 
-   <nav class="navbar navbar-default navbar-expand-lg navbar-light fixed-top" style="background-color: white;">
-    <div class="container-fluid fixed-top" style="background-color: #002D5B; color: white;height: 50px;">
-       <div class="col-8 pl-5 p-1">
+  <nav class="navbar navbar-default navbar-expand-lg navbar-light fixed-top" style="background-color: white;">
+   <div class="container-fluid fixed-top" style="background-color: #002D5B; color: white;height: 50px;">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active ">
         <i class="fa fa-phone"></i>&nbsp; Call Us Today &nbsp;
         <a href="tel:(559) 538-0882" class="text-white" style="font-size: 16px;">(559) 538-0882 </a>
-      </div>
-      <div class="col-8 pl-5 p-1" style="float: right;">
-        <a [routerLink]="['/secure_contact_form']" class="text-white" style="margin-left:250px;text-decoration:underline;" > Contact Us</a>
-      </div>       
-       <div class="col-4 pr-5 text-right">
-        <i class="fa fa-facebook"></i>&nbsp;
-        <i class="fa fa-instagram"></i>&nbsp;
-        <i class="fa fa-twitter"></i>
-       </div>
-    </div>
-    <div class="navbar-header d-flex col mt-30 text-center" style="margin-top: 60px;">
-      <a class="navbar-brand" [routerLink]="['/']" style="color: #002D5B;font-weight: 800; font-size: 25px;">Dawar Insurance Agency</a>
-      <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
-        <span class="navbar-toggler-icon"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-    </div>
-  
-    <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start text-center">
-      <ul class="nav navbar-nav mr-auto" style="margin-top: 50px;">
-        
-        <li class="nav-item dropdown dropbtn">
-          <a class="nav-link dropdown-toggle pl-4" href="#" id="navbardrop" data-toggle="dropdown"style="color:black">
-            Auto, Home and Personal Insurance
-          </a>
-          <div class="dropdown-menu dropdown-content">
-            <a class="dropdown-item" [routerLink]="['/auto_insurance']" style="letter-spacing:1px;">Auto Insurance</a>
-            <a class="dropdown-item" [routerLink]="['/homeowner_insurance']" style="letter-spacing: -1px;">Homeowner Insurance</a>
-            <a class="dropdown-item" [routerLink]="['/renters_insurance']" style="letter-spacing: -1px;">Renters Insurance</a>
-            <a class="dropdown-item" [routerLink]="['/motorcycle_insurance']" style="letter-spacing: -1px;">Motorcycle Insurance</a>
-            <a class="dropdown-item" [routerLink]="['/boat_marine']" style="letter-spacing: -1px;">Boat & Marine Insurance</a>
-          
-          </div>
+      </li>
+  </ul>
+  <div class="navbar-collapse collapse  order-3 dual-collapse2">
+    <ul class="navbar-nav ml-auto ">
+        <li class="nav-item ">
+          <a [routerLink]="['/secure_contact_form']" class="text-white" > Contact Us</a>
         </li>
-        <li class="nav-item dropdown dropbtn">
-            <a class="nav-link dropdown-toggle pl-4" [routerLink]="['/business_insurance']" id="navbardrop" data-toggle="dropdown" style="color:black">
-              Business Insurance
-            </a>
-            <div class="dropdown-menu dropdown-content">
-              <a class="dropdown-item" [routerLink]="['/businessowner_package']" >Business Owner Package Insurance</a>
-            <a class="dropdown-item" [routerLink]="['/commercial_auto']" >Commercial Insurance</a>
-            <a class="dropdown-item" [routerLink]="['/commercial_property']" >Commercial Property Insurance</a>
-            <a class="dropdown-item" [routerLink]="['/general_liability']" >General Liability Insurance</a>
-            <a class="dropdown-item" [routerLink]="['/workers_compensation']" >Worker's Compensation Insurance</a>
-              
-            </div>
-          </li>
-          <li class="nav-item dropdown dropbtn">
-            <a class="nav-link dropdown-toggle pl-4" [routerLink]="['/life_insurance']" id="navbardrop" data-toggle="dropdown" style="color:black">
-              Life Insurance
-            </a>
-            <div class="dropdown-menu dropdown-content">
-              <a class="dropdown-item" [routerLink]="['/fixed_annuities']" >Fixed Annuities</a>
-              <a class="dropdown-item" [routerLink]="['/final_expense_insurance']" >Final Expense Insurance</a>
-              <a class="dropdown-item" [routerLink]="['/individual_life_insurance']" >Individual Life Insurance</a>
-              <a class="dropdown-item" [routerLink]="['/mortgage_protection_insurance']" >Mortgage Protection Insurance</a>
-                
-            </div>
-          </li>
-          <li class="nav-item dropdown dropbtn">
-            <a class="nav-link dropdown-toggle pl-4" [routerLink]="['/health_insurance']" id="navbardrop" data-toggle="dropdown" style="color:black">
-              Health Insurance
-            </a>
-            <div class="dropdown-menu dropdown-content">
-              <a class="dropdown-item" [routerLink]="['/individual_disability_insurance']" >Individual Disability Insurance</a>
-              <a class="dropdown-item" [routerLink]="['/individual_dental_insurance']" >Individual Dental Insurance</a>
-              <a class="dropdown-item" [routerLink]="['/family_health_insurance']" >Individual & Family Health Insurance</a>
-              <a class="dropdown-item" [routerLink]="['/long_term_care']" >Individual Long-Term Care</a>
-              <a class="dropdown-item" [routerLink]="['/individual_vision_insurance']" >Individual Vision Insurance</a>
-            </div>
-          </li>
-          <li class="nav-item dropdown dropbtn">
-            <a class="nav-link dropdown-toggle pl-4" [routerLink]="['/group_benefits']" id="navbardrop" data-toggle="dropdown" style="color:black">
-              Group Benefits
-            </a>
-            <div class="dropdown-menu dropdown-content">
-              <a class="dropdown-item" [routerLink]="['/group_disability_insurance']" >Group Disability Insurance</a>
-              <a class="dropdown-item" [routerLink]="['/group_dental_insurance']">Group Dental Insurance</a>
-              <a class="dropdown-item" [routerLink]="['/group_life_insurance']" >Group Life Insurance</a>
-              <a class="dropdown-item" [routerLink]="['/group_long_term_insurance']" >Group Long-Term Care</a>
-              <a class="dropdown-item" [routerLink]="['/group_health_insurance']" >Group Health Insurance</a>
-            </div>
-          </li>
+    </ul>
+</div>     
+    
+    
+    <!-- <div class="col-8 pl-5 p-1">
+       <i class="fa fa-phone"></i>&nbsp; Call Us Today &nbsp;
+       <a href="tel:(559) 538-0882" class="text-white" style="font-size: 16px;">(559) 538-0882 </a>
+     </div>
+     <div class="col-8 pl-5 p-1 navbar-right">
+       <a [routerLink]="['/secure_contact_form']" class="text-white" style="margin-left:250px;text-decoration:underline;" > Contact Us</a>
+     </div>        -->
+      <div class="col-4 pr-5 text-right">
+       <i class="fa fa-facebook"></i>&nbsp;
+       <i class="fa fa-instagram"></i>&nbsp;
+       <i class="fa fa-twitter"></i>
+      </div>
+   </div>
+   <div class="navbar-header d-flex col mt-30 text-center" style="margin-top: 60px;">
+     <a class="navbar-brand" [routerLink]="['/']" style="color: #002D5B;font-weight: 800; font-size: 25px;">Dawar Insurance Agency</a>
+     <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle navbar-toggler ml-auto">
+       <span class="navbar-toggler-icon"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+       <span class="icon-bar"></span>
+     </button>
+   </div>
+ 
+   <div id="navbarCollapse" class="collapse navbar-collapse justify-content-start text-center">
+     <ul class="nav navbar-nav mr-auto" style="margin-top: 50px;">
+       
+       <li class="nav-item dropdown dropbtn">
+         <a class="nav-link dropdown-toggle pl-4" href="#" id="navbardrop" data-toggle="dropdown"style="color:black">
+           Auto, Home and Personal Insurance
+         </a>
+         <div class="dropdown-menu dropdown-content">
+           <a class="dropdown-item" [routerLink]="['/auto_insurance']" style="letter-spacing:1px;">Auto Insurance</a>
+           <a class="dropdown-item" [routerLink]="['/homeowner_insurance']" style="letter-spacing: -1px;">Homeowner Insurance</a>
+           <a class="dropdown-item" [routerLink]="['/renters_insurance']" style="letter-spacing: -1px;">Renters Insurance</a>
+           <a class="dropdown-item" [routerLink]="['/motorcycle_insurance']" style="letter-spacing: -1px;">Motorcycle Insurance</a>
+           <a class="dropdown-item" [routerLink]="['/boat_marine']" style="letter-spacing: -1px;">Boat & Marine Insurance</a>
+         
+         </div>
+       </li>
+       <li class="nav-item dropdown dropbtn">
+           <a class="nav-link dropdown-toggle pl-4" [routerLink]="['/business_insurance']" id="navbardrop" data-toggle="dropdown" style="color:black">
+             Business Insurance
+           </a>
+           <div class="dropdown-menu dropdown-content">
+             <a class="dropdown-item" [routerLink]="['/businessowner_package']" >Business Owner Package Insurance</a>
+           <a class="dropdown-item" [routerLink]="['/commercial_auto']" >Commercial Insurance</a>
+           <a class="dropdown-item" [routerLink]="['/commercial_property']" >Commercial Property Insurance</a>
+           <a class="dropdown-item" [routerLink]="['/general_liability']" >General Liability Insurance</a>
+           <a class="dropdown-item" [routerLink]="['/workers_compensation']" >Worker's Compensation Insurance</a>
+             
+           </div>
+         </li>
+         <li class="nav-item dropdown dropbtn">
+           <a class="nav-link dropdown-toggle pl-4" [routerLink]="['/life_insurance']" id="navbardrop" data-toggle="dropdown" style="color:black">
+             Life Insurance
+           </a>
+           <div class="dropdown-menu dropdown-content">
+             <a class="dropdown-item" [routerLink]="['/fixed_annuities']" >Fixed Annuities</a>
+             <a class="dropdown-item" [routerLink]="['/final_expense_insurance']" >Final Expense Insurance</a>
+             <a class="dropdown-item" [routerLink]="['/individual_life_insurance']" >Individual Life Insurance</a>
+             <a class="dropdown-item" [routerLink]="['/mortgage_protection_insurance']" >Mortgage Protection Insurance</a>
+               
+           </div>
+         </li>
+         <li class="nav-item dropdown dropbtn">
+           <a class="nav-link dropdown-toggle pl-4" [routerLink]="['/health_insurance']" id="navbardrop" data-toggle="dropdown" style="color:black">
+             Health Insurance
+           </a>
+           <div class="dropdown-menu dropdown-content">
+             <a class="dropdown-item" [routerLink]="['/individual_disability_insurance']" >Individual Disability Insurance</a>
+             <a class="dropdown-item" [routerLink]="['/individual_dental_insurance']" >Individual Dental Insurance</a>
+             <a class="dropdown-item" [routerLink]="['/family_health_insurance']" >Individual & Family Health Insurance</a>
+             <a class="dropdown-item" [routerLink]="['/long_term_care']" >Individual Long-Term Care</a>
+             <a class="dropdown-item" [routerLink]="['/individual_vision_insurance']" >Individual Vision Insurance</a>
+           </div>
+         </li>
+         <li class="nav-item dropdown dropbtn">
+           <a class="nav-link dropdown-toggle pl-4" [routerLink]="['/group_benefits']" id="navbardrop" data-toggle="dropdown" style="color:black">
+             Group Benefits
+           </a>
+           <div class="dropdown-menu dropdown-content">
+             <a class="dropdown-item" [routerLink]="['/group_disability_insurance']" >Group Disability Insurance</a>
+             <a class="dropdown-item" [routerLink]="['/group_dental_insurance']">Group Dental Insurance</a>
+             <a class="dropdown-item" [routerLink]="['/group_life_insurance']" >Group Life Insurance</a>
+             <a class="dropdown-item" [routerLink]="['/group_long_term_insurance']" >Group Long-Term Care</a>
+             <a class="dropdown-item" [routerLink]="['/group_health_insurance']" >Group Health Insurance</a>
+           </div>
+         </li>
 
-      </ul>   
-    </div>
-  </nav>
+     </ul>   
+   </div>
+ </nav>
 </header>
