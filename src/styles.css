@@ -22,6 +22,12 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
    }
 
+   .team-profile p {
+    font-family: 'Times New Roman', Times, serif;
+    /* font-weight: 500px; */
+    font-size: 20px;
+    text-align: justify;
+  }
   
   /* body {
     padding: 20px;
